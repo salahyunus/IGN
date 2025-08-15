@@ -8,6 +8,7 @@ import { SubjectsPage } from "@/pages/SubjectsPage";
 import { NotesPage } from "@/pages/NotesPage";
 import { SubmitNotesPage } from "@/pages/SubmitNotesPage";
 import { Subject } from "@/types";
+import CrispChat from "./components/CrispChat";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ function App() {
         <TooltipProvider>
           <Toaster />
           <Sonner />
+          <CrispChat />
           {showSubmitNotes ? (
             <SubmitNotesPage onBack={handleBack} />
           ) : selectedSubject ? (
